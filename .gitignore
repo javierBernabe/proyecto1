@@ -1,0 +1,31 @@
+# para poner comentarios
+
+# las líneas en blanco se ignoran
+
+# puedo indicar un fichero concreto
+tmp/peliculas_marvel.txt
+Thumbs.db
+.DS_store # todos los archivos que tengan ese nombre, independientemente de su ubicación, se ignora
+
+# todas las carpetas tmp se ignoran, con independencia de su ubicación
+tmp/
+
+# solo ignora la carpeta tmp que se haya en la raíz.
+/tmp
+
+# ignora todos los ficheros de texto de cualquier directorio tmp
+tmp/*.txt
+
+# ignora todos los ficheros que comiencen por todo con independencia de su ubicación
+todo*.*
+
+# todos los archivos con dicho patrón se ignoran
+log??-??-????
+
+# ignora cualquier carpeta tmp que haya dentro de la carpeta src, da igual el nivel en el que se encuentre.
+/src/**/tmp
+
+# anula la regla de ignore en caso de que exista en alguna parte de este archivo situado más arriba
+!tmp/peliculas_marvel.txt
+
+!listados/todo_marvel.txt
